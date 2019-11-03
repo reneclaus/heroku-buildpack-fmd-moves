@@ -5,7 +5,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 DARKNET_SRC_URL="https://codeload.github.com/pjreddie/darknet/zip/master"
-YOLO_V3_WEIGHTS_URL="https://pjreddie.com/media/files/yolov3.weights"
+YOLO_V3_WEIGHTS_URL="https://pjreddie.com/media/files/yolov3-tiny.weights"
 
 DARKNET_PATH=$CACHE_DIR/darknet-master
 DARKNET_CACHE_BIN=$DARKNET_PATH/darknet
