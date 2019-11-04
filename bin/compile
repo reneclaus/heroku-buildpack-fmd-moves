@@ -31,10 +31,13 @@ fi
 if [ ! -d "$DESTINATION" ]; then
     mkdir -p "$DESTINATION"
 
+sudo apt-get install libsndfile1
+
     if [ ! -f "$DARKNET_CACHE_BIN" ]; then
         echo '-----> Building Darkent'
         CURRENT=$(pwd)
         cd "$DARKNET_PATH"
+        sed -i '/            if(bot > im.h-1) bot = im.h-1;\n/a             printf("{''left'':%d, ''top'':%d, ''right'':%d, ''bottom'':%d}\\n", left, top, right, bot);\n'
         make > /dev/null
         cd $CURRENT
     fi
@@ -55,3 +58,4 @@ if [ ! -f "$YOLO_V3_WEIGHTS_FILE" ]; then
     echo '-----> Copying yolov3.weights'
     cp "$YOLO_V3_CACHE_FILE" "$YOLO_V3_WEIGHTS_FILE"
 fi
+
