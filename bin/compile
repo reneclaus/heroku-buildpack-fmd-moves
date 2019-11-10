@@ -56,6 +56,3 @@ if [ ! -f "$YOLO_V3_WEIGHTS_FILE" ]; then
     echo '-----> Copying yolov3.weights'
     cp "$YOLO_V3_CACHE_FILE" "$YOLO_V3_WEIGHTS_FILE"
 fi
-
-echo '-----> Installing libsndfile1'
-sudo apt-get install libsndfile1
